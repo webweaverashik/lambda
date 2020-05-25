@@ -1,0 +1,547 @@
+/*--Global Settings--*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Yeseva One', cursive;
+    text-rendering: optimizeLegibility;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 8rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+h2{
+    font-size: 3.6rem;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+h3{
+    color: #fff;
+    font-size: 2.1rem;
+}
+section{
+    padding: 10rem 0;
+}
+footer{
+    padding: 5rem 0;
+}
+
+
+
+
+
+/*--Reusable components--*/
+.container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn{
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 2rem 5rem;
+    margin-top: 3rem;
+    background: #999900;
+}
+.divider{
+    display: block;
+    margin: 1rem auto;
+}
+.short-info{
+    font-family: 'Lato', sans-serif;
+    display: block;
+    width: 80%;
+    margin: 1.5rem auto;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #4c4c4c;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+
+
+
+/*====HEADER SECTION====*/
+header{
+    background: url('bg-img/home-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+header .welcome-text .divider{
+    margin-top: -3rem;
+}
+.logo{
+    height: 7rem;
+    width: auto;
+    float: left;
+    margin: 1rem 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+/*--Navigation Design--*/
+    
+nav{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.6)),to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0));
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.main-nav{
+    font-family: 'Gentium Book Basic', serif;
+    list-style-type: none;
+    float: right;
+    margin-top: 4rem;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 4.5rem;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 700;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    padding-top: 1rem;
+    border-top: .3rem solid #cc9900;
+}
+/*.main-nav .active{
+    padding-top: 1rem;
+    border-top: .3rem solid #cc9900 !important;
+}*/
+.sticky{
+    position: fixed;
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.6)),to(rgba(0, 0, 0, 0.1)));
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1));
+    height: 8rem;
+    width: 100%;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}
+.sticky .logo{
+    height: 5rem;
+    width: auto;
+    float: left;
+    margin: 1.5rem 0;
+}
+.sticky .main-nav{
+    margin-top: 2.5rem;
+    
+} 
+
+/*--Mobile Menu Design--*/
+.mobile-menu{
+    display: none;
+    width: 100%;
+}
+.mobile-menu span{
+    color: #fff;
+    font-size: 4rem;
+    float: right;
+    margin-top: 2rem;
+}
+.mobile-menu span:hover{
+    cursor: pointer;
+}
+.overlay{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.9);
+    z-index: 1;
+    overflow-x: hidden;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.overlay-contents{
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
+.overlay a{
+    text-decoration: none;
+    display: block;
+    color: #999;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.overlay a:hover{
+    color: #fff;
+}
+.overlay .closebtn{
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    font-size: 4rem;
+}
+
+
+
+
+
+/*--Welcome Text Section Desing--*/
+.welcome-text{
+    width: 95rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.btn-book{
+    background: rgba(0,0,0,0.65);
+    border: .1rem solid #000;
+    margin-right: 3rem;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.btn-menu{
+    background: rgba(211, 207, 188, 0.2);
+    border: .1rem solid #d3cfbc;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.btn-book:hover,
+.btn-menu:hover{
+    color: #cc9900;
+}
+
+
+
+
+/*====About Section=====*/
+.about-section{
+    background: url('bg-img/about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+.about-section h2{
+    color: #cc9900;
+}
+.about-section .box{
+    height: 70%;
+}
+.img-chef{
+    display: block;
+    margin-top: 4rem;
+    margin-left: 35%;
+}
+.img-dish{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/*====Ingredients Section=====*/
+.ingredients{
+    background: url('bg-img/ingredients-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.ingredients .box{
+    height: auto;
+    width: 50%;
+}
+.ingredients .box:nth-child(2){
+    background: rgba(0, 0, 0, 0.67);
+    padding: 8rem 7rem;
+    margin-left: 0;
+}
+.ingredients .box h2{
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.ingredients .short-info{
+    width: 100%;
+    color: #fff;
+    margin-bottom: 6rem;
+}
+
+
+/*--Spice Grid--*/
+.spice-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 3rem;
+}
+.img-ingredients{
+    width: 90%;
+    height: auto;
+}
+
+/*====Menu Section====*/
+.menu-section{
+    background: url('bg-img/menu-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.menu-section .menu-box{
+    width: 44%;
+}
+.menu-section .menu-box:last-child{
+    margin-left: 12%;
+}
+.menu-section h2{
+    color: #cc9900;
+}
+.item-list{
+    margin-bottom: 3rem;
+}
+.item-list .name-price-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.item-list .menu-grid-name{
+    text-align: left;
+    font-size: 2.1rem;
+    color: #c89f2d;
+}
+.item-list .menu-grid-price{
+    text-align: right;
+    font-size: 2.1rem;
+    color: #c89f2d;
+}
+.item-list .item-info{
+    font-family: 'Lato', sans-serif;
+    color: #4c4c4c;
+    font-size: 1.6rem;
+    text-align: left;
+}
+.item-list hr{
+    display: block;
+    border: 0;
+    border-bottom: 1px dotted #c89f2d;
+    margin: 1rem 0;
+}
+.item-list:last-child{
+    margin-bottom: 0;
+}
+.menu-section .category-item{
+    margin-top: 6rem;
+}
+.menu-section .category-item:nth-child(1),
+.menu-section .category-item:nth-child(3){
+    margin-top: 0;
+}
+.special-item{
+    padding: 1rem 1rem;
+    border: 1px dotted #c89f2d;
+}
+.special-tag{
+    font-family: 'Lato', sans-serif;
+    display: block;
+    width: 20%;
+    margin-left: 80%;
+    text-align: center;
+    background: #c89f2d;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: .5rem 1rem;
+}
+
+
+/*====Review Section====*/
+.review-section{
+    background: url('bg-img/review-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.review-section .box{
+    background: rgba(0, 0, 0, 0.8);
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+.review-section .short-info{
+    font-family: 'Gentium Book Basic', serif;
+    color: #dde0df;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    width: 90%;
+}
+.review-section .reviewer{
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 1.8rem;
+    display: block;
+    margin: 3rem 0;
+}
+.review-section span{
+    color: #f2f4f4;
+    font-size: 3rem;
+}
+
+
+
+/*====Reservation Section====*/
+.reservation-section{
+    background: url('bg-img/reservation-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.reservation-section .item-img{
+    width: 95%;
+}
+.right-food h2{
+    color: #cc9900;
+}
+.right-food .short-info{
+    width: 84%;
+}
+
+/*--reservation-form--*/
+.form-reservation{
+    margin-top: 4rem;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 10%;
+}
+.form-reservation form{
+    font-family: 'Open Sans', sans-serif;
+}
+.form-reservation input{
+    width:100%;
+    border: 1px solid #c8c6c6;
+    background: rgba(255, 255, 255, 0.3);
+    color: #7c7c7c;
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+}
+.form-reservation input[type="date"]{
+    padding: .7rem 1rem;
+}
+.form-reservation input[type="submit"]{
+    color: #fff;
+    background: #c89f2d;
+    font-size: 1.6rem;
+    width: 50%;
+    margin: 0 25%;
+    margin-top: 3rem;
+    padding: 1rem 6rem;
+}
+.form-reservation input::-webkit-input-placeholder{
+    font-style: italic;
+    color: #7c7c7c;
+}
+.form-reservation input:-ms-input-placeholder{
+    font-style: italic;
+    color: #7c7c7c;
+}
+.form-reservation input::placeholder{
+    font-style: italic;
+    color: #7c7c7c;
+}
+.form-reservation input:hover{
+    border: 1px solid #c89f2d;
+}
+.form-reservation input[type="submit"]:hover{
+    cursor: pointer;
+}
+.form-reservation label:hover{
+    cursor: text;
+}
+.form-reservation input:focus{
+    border: 1px solid #c89f2d;
+}
+.form-reservation label{
+    text-align: left;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c9a131;
+    padding: 1rem 0;
+}
+.form-reservation .date-box{
+    margin: 1% 0 1% 0; 
+}
+.form-reservation .spacing{
+    margin-top: 1rem;
+}
+
+
+
+
+/*====Footer Section====*/
+.footer-section{
+    background: #191919;
+}
+.footer-section .short-info{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 1.6rem;
+}
+.footer-section .first-footer .short-info{
+    width: 100%;
+}
+.footer-section .payment-grid,
+.footer-section .icon-grid{
+    margin-top: 3rem;
+}
+.footer-section .payment-grid i,
+.footer-section .icon-grid i{
+    font-size: 2rem;
+    color: #fff;
+    margin-left: 1rem;
+}
+.footer-section .icon-grid  i:hover {
+    color: #cc9900;   
+}
+
+
+
+

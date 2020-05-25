@@ -1,0 +1,222 @@
+@media only screen and (min-width: 1400px) {
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    html{
+    font-size: 65.0%;
+    scroll-behavior: smooth;
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+    h1{
+        font-size: 6.5rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 5.5rem;
+    }
+    .ingredients div.col:first-child{
+        display: none;
+    }
+    .ingredients div.box:nth-child(2){
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    h1{
+        font-size: 5rem;
+    }
+    header{
+        height: 80vh;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    html{
+        font-size: 56.25%
+    }
+    .img-chef{
+        display: block;
+        height: 40%;
+        width: 40%;
+        margin-top: 2rem; 
+    }
+    .main-nav{
+        display: none;
+    }
+    .review-section .short-info{
+        font-size: 2rem;
+    }
+    footer .divider{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    h1{
+        font-size: 4rem;
+        padding-bottom: 5rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    .btn{
+        font-size: 1.5rem;
+    }
+    header .divider{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    h1{
+        font-size: 3.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 640px){
+    header{
+        height: 60vh;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    section{
+        padding: 5rem 0;
+    }
+    footer{
+        padding: 3rem 0;
+    }
+}
+@media only screen and (max-width: 560px){
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    header,section,footer{
+        overflow: hidden;
+    }
+    h1{
+        width: 50%;
+        margin: 0 25%;
+    }
+    header,.ingredients,.review-section{
+        background-attachment: scroll;
+    }
+    .span_1_of_2,
+    .span_1_of_3{
+        width: 100%;
+    }
+    .reservation-section .span_1_of_2:first-child .span_1_of_2{
+        width: 49.2%;
+    }
+    .reservation-section .span_1_of_2:nth-child(2){
+        margin-left: 0;
+    }
+    .right-food{
+        margin-top: 2rem;
+    }
+    .ingredients div.box:nth-child(2){
+        width: 100%;
+        margin: auto;
+    }
+    .menu-section .menu-box{
+        width: 100%;
+    }
+    .menu-section .menu-box:last-child{
+        margin-left: 0;
+        margin-top: 10%;
+    }
+    .review-section .box{
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer .divider{
+        width: 50%;
+        margin: 1rem 25%;
+    }
+    footer .span_1_of_3{
+        margin-bottom: 6rem;
+    }
+    .form-reservation .date-box{
+        margin: 0; 
+    }
+    .form-reservation .spacing{
+        margin: 0;;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    html{
+        font-size: 50%;
+    }
+    .btn{
+        width: 40%;
+        margin: 1rem 30%;
+    }
+    .form-reservation input[type="submit"]{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .logo{
+        height: 5rem;
+        width: auto;
+    }
+    .mobile-menu span{
+        font-size: 3rem;
+    }
+    .btn{
+        width: 30%;
+        margin: 1rem 35%;
+    }
+    h1{
+        width: 40%;
+        margin: 0 30%;
+        margin-top: 5rem;
+    }
+    .ingredients .box:nth-child(2){
+        padding: 5rem 2rem;
+    }
+    section .divider{
+        width: 70%;
+        margin: 1rem 15%;
+    }
+    header .divider{
+        width: 20%;
+        margin: 1rem 40%;
+    }
+}
+
+
+
+
+
+
+
