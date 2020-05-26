@@ -5,6 +5,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -74,6 +75,10 @@ footer{
     font-weight: 400;
     line-height: 1.4;
 }
+.active{
+    padding-top: 1rem;
+    border-top: .3rem solid #cc9900 !important;
+}
 
 
 
@@ -137,10 +142,7 @@ nav{
     padding-top: 1rem;
     border-top: .3rem solid #cc9900;
 }
-/*.main-nav .active{
-    padding-top: 1rem;
-    border-top: .3rem solid #cc9900 !important;
-}*/
+
 .sticky{
     position: fixed;
     background: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.6)),to(rgba(0, 0, 0, 0.1)));
@@ -541,7 +543,4 @@ nav{
 .footer-section .icon-grid  i:hover {
     color: #cc9900;   
 }
-
-
-
 
