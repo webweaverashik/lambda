@@ -1,4 +1,4 @@
 # lamda
 LAMBDA | Da Restaurant
 
-https://ashikur170.github.io/lambda/
+https://webweaverashik.github.io/lambda/
