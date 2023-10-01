@@ -26,7 +26,7 @@ document.querySelector("#today").value = today;
 
 
 	// One Page Nav
-	var top_offset = $('.header-area').height() - 350;
+	var top_offset = $('.header-area').height() - 650;
 	$('.header-area nav ul').onePageNav({
 		currentClass: 'active',
 		scrollOffset: top_offset,
